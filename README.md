@@ -2,26 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
-## Development server
+## Note：
+Jul 18 Pair Coding: 
+Angular 17, 
+```typescript
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+providers: [
+  provideHttpClient(withFetch())
+]
+```
+When you use withFetch(), Angular’s HttpClient is configured to use the Fetch API instead of XHR. 
+The Fetch API is a more modern alternative that offers several advantages over XHR, 
+such as better support for streaming responses, a more powerful and flexible request/response structure, 
+and a simpler and more readable syntax for making requests.
 
-## Code scaffolding
+Cors Problem Fix(Path Rewrite), 
+PrimeNG(`importProvidersFrom(BrowserAnimationsModule)`), 
+@OutPut(), EventEmitter
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
